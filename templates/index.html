@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+{% block contend %}
+<b>
+    <h3> Bu platforma orqali turli loyiharga yozilga unit testlardan o'tish mumkin va loyihani qay darajada to'g'ri
+        tayyorlaganligini tekshirish mumkin
+    </h3>
+    <a href="{% url 'new' %}"><h3>sinab ko'r</h3></a>
+
+</b>
+
+<br>
+
+<h1> Bizda mavjud unit testlar</h1>
+<div class="row">
+    <div class="col-6">
+        <div class="row">
+            {%for test in tests%}
+            <div class="col">
+                <a href="{% url 'testing:test-runner' test.id%}"><h3>{{test.name}} kursi</h3></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
