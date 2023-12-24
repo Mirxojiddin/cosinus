@@ -6,7 +6,7 @@ words_list = [
     "giraffe",
     "chair"
     ]
-
+xato= 0
 attempt = 5
 index_list = []
 random_number = random.randint(0, 4)
@@ -29,6 +29,7 @@ while attempt > 0:
         else:
             attempt -= 1
             print(f"sizda {attempt} ta urinish qoldi")
+            xato+=1
     else:
         print("Iltimos harf brikmasi yoki son kiritmang")
     if attempt == 0:
@@ -37,4 +38,4 @@ while attempt > 0:
 if is_correct:
     print(f"siz yutdingiz. So'z {word} edi")
 else:
-    print(f"siz yutqazdiz. So'z {word} edi")
+    print(f"siz yutqazdiz. So'z {word} edi, Xato urinishlar soni")
