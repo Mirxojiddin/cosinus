@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # packages
+    'rest_framework.authtoken',
     "rest_framework",
     "crispy_forms",
     "crispy_bootstrap5",
@@ -48,6 +49,16 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'cosinus.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        # You can add more authentication classes as needed
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media-files'
