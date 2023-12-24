@@ -11,9 +11,7 @@ class CostumeUserSerializer(serializers.ModelSerializer):
 	last_name = serializers.CharField(max_length=100, required=True, error_messages={
 		'required': "last_name  kiritilmagan"
 	})
-	avatar = serializers.ImageField(default="default_photo.jpg",  error_messages={
-		'required': "avatar  kiritilmagan"
-	})
+	avatar = serializers.ImageField(default="default_photo.jpg" )
 	phone_number = serializers.CharField(max_length=17, required=True, error_messages={
 					'max_length': "Telephone xato kiritilgan ",
 					'required': "Telephone  kiritilmagan"

@@ -1,4 +1,4 @@
-from random import random
+import random
 words_list = [
     "tiger",
     "tree",
@@ -28,14 +28,14 @@ while attempt > 0:
                     break
         else:
             attempt -= 1
-            print(f"sizda {attempt} ta urinish qoldi")
+            print(f"Siz kiritgan harf so'zda mavjud emas. sizda {attempt} ta urinish qoldi")
             xato+=1
     else:
-        print("Iltimos harf brikmasi yoki son kiritmang")
+        print("Iltimos harf birikmasi yoki son kiritmang")
     if attempt == 0:
         break
 
 if is_correct:
-    print(f"siz yutdingiz. So'z {word} edi")
+    print(f"siz yutdingiz. So'z {word} edi, Xato urinishlar soni")
 else:
-    print(f"siz yutqazdiz. So'z {word} edi, Xato urinishlar soni")
+    print(f"siz yutqazdiz. So'z {word} edi, ")
