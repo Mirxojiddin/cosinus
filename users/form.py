@@ -5,7 +5,7 @@ from users.models import CostumeUser
 class UserCreateForm(ModelForm):
     class Meta:
         model = CostumeUser
-        fields = ('username', 'first_name', 'last_name', 'email', 'password', 'course')
+        fields = ('first_name', 'last_name',  'password', 'phone_number', 'avatar')
 
     def save(self, commit=True):
         user = super().save(commit)
@@ -18,5 +18,5 @@ class UserCreateForm(ModelForm):
 class UserEditForm(ModelForm):
     class Meta:
         model = CostumeUser
-        fields = ('username', 'first_name', 'last_name', 'email')
+        fields = ('first_name', 'last_name', 'email')
 

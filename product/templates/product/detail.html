@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %} Datail page {% endblock %}
+
+
+{% block contend %}
+    {%if error%}
+    <div class="row ">
+        <div class="col-6">
+            <h1>{{error}}</h1>
+
+        </div>
+    </div>
+    {%else%}
+    <div class="row ">
+        <div class="col-4">
+            <img class="cover_pic" alt="product" src="{{product.image.url}} ">
+
+        </div>
+    </div>
+     <div class="row mb-3">
+        <div class="col-6">
+            {{ product.name }}<br><br>
+            {{ product.price }}<br><br>
+            {{product.create_time}}<br><br>
+            {{product.update_time}}<br><br>
+            {{ product.status.name }}<br><br>
+        </div>
+    </div>
+    <a class="nav-link btn btn-info border - 5" href="{% url 'product:confirm-delete-product' product.id %}">o'chirsih</a>
+    <a class="nav-link btn btn-info border - 5" href="{% url 'product:edit-product' product.id %}"> yangilash</a>
+    {%endif%}
+
+{% endblock %}

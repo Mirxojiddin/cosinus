@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Confirm Delete Product {% endblock %}
+
+{% block contend %}
+    <h3>Are you sure you want to delete this Product?</h3>
+
+    <p>
+        <b>Book</b>: {{ product.name }}
+    </p>
+
+    <a href="{% url 'product:delete-product' product.id %}" class="btn btn-outline-danger">Yes</a>
+    <a href="{% url 'product:detail' product.id %}" class="btn btn-outline-primary">No</a>
+{% endblock %}

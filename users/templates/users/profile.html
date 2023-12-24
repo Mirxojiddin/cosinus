@@ -5,7 +5,7 @@
 {% block contend %}
 
 <h1> Profile page</h1>
-    <img class="img" src="{{user.user_photo.url}}"> <br>
+    <img class="img" src="{{user.avatar.url}}"> <br>
     <a href="{% url 'users:profile_edit' %}">  Edit </a> <br>
 
     {{user.username}}<br>
